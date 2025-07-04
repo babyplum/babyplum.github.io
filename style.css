@@ -2,3 +2,11 @@ h1{
     text-align: center;
     color: #666699;
 }
+
+div.paper#container {
+    margin: 15px; 
+    padding: 20px;
+    border: 1px solid #ccc; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    background-color: #fff; 
+}
