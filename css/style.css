@@ -1,8 +1,22 @@
+/* general style*/
 h1{
     text-align: center;
     color: #666699;
 }
+h3{
+    text-align: center;
+    color: #666699;
+}
 
+
+.menu {
+    display: flex;
+    gap:25x;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+/* styel for the resume*/
 div.paper#container {
     margin: 15px; 
     padding: 20px;
