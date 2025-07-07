@@ -8,8 +8,12 @@ h3{
     color: #666699;
 }
 
+#slogan{
+    text-align: center;
+    color: #666699;
+}
 
-.menu {
+#menu {
     display: flex;
     gap:25x;
     align-items: center;
