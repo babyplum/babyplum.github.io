@@ -1,0 +1,187 @@
+/* I used Gemini to create this test form */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Simple transition for the message box */
+        #success-message {
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Header Links -->
+    <header class="flex justify-end p-4 text-sm">
+        <div class="flex space-x-4 items-center">
+            <a href="#" class="hover:underline">Gmail</a>
+            <a href="#" class="hover:underline">Images</a>
+            <a href="#" class="p-2 rounded-full hover:bg-gray-100">
+                <svg class="w-6 h-6" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M3,4H7V8H3V4M9,5H13V7H9V5M15,4H19V8H15V4M3,10H7V14H3V10M15,10H19V14H15V10M9,11H13V13H9V11M3,16H7V20H3V16M9,17H13V19H9V17M15,16H19V20H15V16Z" />
+                </svg>
+            </a>
+            <img src="https://placehold.co/32x32/7e22ce/ffffff?text=U" alt="User Avatar" class="rounded-full">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col justify-center items-center px-4">
+        <!-- Logo -->
+        <h1 class="text-6xl md:text-8xl font-bold mb-8">
+            <span class="text-blue-600">M</span>
+            <span class="text-red-500">a</span>
+            <span class="text-yellow-500">r</span>
+            <span class="text-blue-600">g</span>
+            <span class="text-green-600">i</span>
+            <span class="text-red-500">n</span>
+            <span class="text-blue-600">D</span>
+            <span class="text-red-500">u</span>
+            <span class="text-yellow-500">o</span>
+        </h1>
+
+        <!-- Search Form -->
+        <form id="telegram-form" class="w-full max-w-xl mb-6">
+            <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                    <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <input 
+                    type="text" 
+                    id="search-input"
+                    class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    placeholder="Type message and press Enter..."
+                >
+            </div>
+            <div class="flex justify-center mt-6 space-x-4">
+                <button type="submit" class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded-md">Send to Telegram</button>
+                <button type="button" class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded-md">I'm Feeling Lucky</button>
+            </div>
+        </form>
+
+        <!-- Success Message Box -->
+        <div id="success-message" class="opacity-0 mt-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg relative" role="alert">
+            <strong class="font-bold">Success!</strong>
+            <span class="block sm:inline">Your message has been sent.</span>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 text-gray-600 text-sm">
+        <div class="py-3 px-8 border-b border-gray-300">
+            <p>United Kingdom</p>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-center py-3 px-8 space-y-2 md:space-y-0">
+            <div class="flex space-x-6">
+                <a href="#" class="hover:underline">About</a>
+                <a href="#" class="hover:underline">Advertising</a>
+                <a href="#" class="hover:underline">Business</a>
+                <a href="#" class="hover:underline">How Search works</a>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:underline">Privacy</a>
+                <a href="#" class="hover:underline">Terms</a>
+                <a href="#" class="hover:underline">Settings</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- IMPORTANT: Configuration ---
+        // Replace with your actual Bot Token and Chat ID.
+        // WARNING: For security, never expose your Bot Token in client-side JavaScript in a real application.
+        // This should be handled by a backend server. This example is for demonstration purposes only.
+        const BOT_TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN';
+        const CHAT_ID = 'YOUR_TELEGRAM_CHAT_ID';
+
+        // --- Element References ---
+        const telegramForm = document.getElementById('telegram-form');
+        const searchInput = document.getElementById('search-input');
+        const successMessage = document.getElementById('success-message');
+
+        // --- Event Listener ---
+        telegramForm.addEventListener('submit', function(event) {
+            // Prevent the default form submission which reloads the page
+            event.preventDefault();
+
+            const message = searchInput.value.trim();
+
+            if (message) {
+                sendMessageToTelegram(message);
+            }
+        });
+
+        // --- Telegram API Function ---
+        async function sendMessageToTelegram(text) {
+            // The URL for the Telegram Bot API's sendMessage method
+            const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+            // The data to be sent in the request body
+            const payload = {
+                chat_id: CHAT_ID,
+                text: text,
+                parse_mode: 'HTML' // Optional: for formatting like bold, italic, etc.
+            };
+            
+            // --- SECURITY WARNING ---
+            // The following `fetch` call exposes your BOT_TOKEN to anyone who inspects the website's code.
+            // In a production environment, you should create a backend endpoint (e.g., using Node.js, Python, or a serverless function)
+            // that receives the message from your frontend and then securely makes the API call to Telegram from the server.
+
+            try {
+                // Check if placeholder values are still being used
+                if (BOT_TOKEN === 'YOUR_TELEGRAM_BOT_TOKEN' || CHAT_ID === 'YOUR_TELEGRAM_CHAT_ID') {
+                    console.error("Please replace 'YOUR_TELEGRAM_BOT_TOKEN' and 'YOUR_TELEGRAM_CHAT_ID' with your actual credentials.");
+                    alert("Configuration needed! Please check the console (F12) for instructions.");
+                    return;
+                }
+
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await response.json();
+
+                if (data.ok) {
+                    console.log('Message sent successfully:', data);
+                    showSuccessMessage();
+                    searchInput.value = ''; // Clear the input field on success
+                } else {
+                    console.error('Failed to send message:', data);
+                    alert(`Error sending message: ${data.description}`);
+                }
+
+            } catch (error) {
+                console.error('Error making API call:', error);
+                alert('An error occurred. Please check the console for details.');
+            }
+        }
+
+        // --- UI Feedback Function ---
+        function showSuccessMessage() {
+            successMessage.style.opacity = '1';
+            setTimeout(() => {
+                successMessage.style.opacity = '0';
+            }, 3000); // Message disappears after 3 seconds
+        }
+    </script>
+
+</body>
+</html>
