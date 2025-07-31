@@ -1,18 +1,281 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Nam H. Bui</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pursuit of Knowledge: A Lifelong Learner's Journey</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFBEB; /* Light yellow-cream for body background */
+            color: #374151; /* Darker gray for general text */
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FEF3C7; /* Light yellow */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D97706; /* Orange-yellow for thumb */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B45309; /* Darker orange-yellow */
+        }
+    </style>
+</head>
+<body class="text-gray-800">
 
-    <body>
-        <div id="header"></div>
-        <main>
-            <h1 id="main-title">Bùi Hữu Nam</h1>
-            <h3 id="subtitle">nambh@ssi.com.vn</h3>
-            <p id="slogan">This my my personal learning center. Everything in this page will be mannualy built from scratch</p>
-        </main>
-        <div id="footer"></div>
-        <script src="js/main.js"></script>
-    </body>
+    <!-- Header Section - LA Lakers Purple and Gold -->
+    <header class="bg-gradient-to-r from-purple-800 to-yellow-500 text-white shadow-lg py-6 px-4 sm:px-6 lg:px-8 rounded-b-xl relative overflow-hidden">
+        <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center relative z-10">
+            <h1 class="text-3xl sm:text-4xl font-bold mb-2 sm:mb-0">BabyPlum</h1>
+            <p class="text-lg sm:text-xl font-light">Nam H. Bui's journal of boredom</p>
+        </div>
+    </header>
+
+    <!-- Navigation Section - White background with Purple links -->
+    <nav class="bg-white shadow-md py-4 sticky top-0 z-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <ul class="flex flex-wrap justify-center gap-4 sm:gap-6">
+                <li><a href="#languages" class="text-purple-700 hover:text-yellow-600 font-medium text-base sm:text-lg transition-colors duration-200 p-2 rounded-md hover:bg-purple-50">Languages & Linguistics</a></li>
+                <li><a href="#professional" class="text-purple-700 hover:text-yellow-600 font-medium text-base sm:text-lg transition-colors duration-200 p-2 rounded-md hover:bg-purple-50">Professional & Business Acumen</a></li>
+                <li><a href="#digital" class="text-purple-700 hover:text-yellow-600 font-medium text-base sm:text-lg transition-colors duration-200 p-2 rounded-md hover:bg-purple-50">Digital Literacy & Innovation</a></li>
+                <li><a href="#personal" class="text-purple-700 hover:text-yellow-600 font-medium text-base sm:text-lg transition-colors duration-200 p-2 rounded-md hover:bg-purple-50">Personal Mastery & Lifestyle</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Sections -->
+    <main class="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
+
+        <!-- Languages & Linguistics Section - Light Purple -->
+        <section id="languages" class="mb-12 bg-purple-100 p-6 rounded-xl shadow-lg">
+            <h2 class="text-3xl font-semibold text-purple-800 mb-6 border-b-2 border-purple-300 pb-2">
+                <span class="mr-2">🗣️</span> Languages & Linguistics
+            </h2>
+            <p class="text-lg text-gray-700 mb-8">This section chronicles my journey through various languages, from ambitious fluency goals to the joy of exploring new linguistic landscapes.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Language Card Example -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-purple-700 mb-3">English (C2 Goal)</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        <strong>Current Focus:</strong> Mastering nuanced vocabulary and idiomatic expressions.
+                        <br><strong>Recent Progress:</strong> Successfully completed a challenging academic paper review.
+                        <br><strong>Next Steps:</strong> Engage more actively in debates and public speaking opportunities.
+                    </p>
+                    <a href="#" class="text-yellow-600 hover:text-yellow-800 font-medium text-sm">Read more journal entries &rarr;</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-purple-700 mb-3">Deutsch (B2 Goal)</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        <strong>Current Focus:</strong> Deepening understanding of complex grammar structures (e.g., subjunctive mood).
+                        <br><strong>Recent Progress:</strong> Started reading German novels without translation.
+                        <br><strong>Next Steps:</strong> Plan a language immersion trip to Germany.
+                    </p>
+                    <a href="#" class="text-yellow-600 hover:text-yellow-800 font-medium text-sm">Read more journal entries &rarr;</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-purple-700 mb-3">汉语 (HSK 6 Goal)</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        <strong>Current Focus:</strong> Expanding character recognition and understanding classical Chinese texts.
+                        <br><strong>Recent Progress:</strong> Can now follow most Chinese news broadcasts.
+                        <br><strong>Next Steps:</strong> Practice writing longer essays and formal communications.
+                    </p>
+                    <a href="#" class="text-yellow-600 hover:text-yellow-800 font-medium text-sm">Read more journal entries &rarr;</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-purple-700 mb-3">한글 (Topik 2 Goal)</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        <strong>Current Focus:</strong> Improving conversational fluency and understanding Korean pop culture references.
+                        <br><strong>Recent Progress:</strong> Held a 30-minute conversation entirely in Korean.
+                        <br><strong>Next Steps:</strong> Watch Korean dramas without subtitles.
+                    </p>
+                    <a href="#" class="text-yellow-600 hover:text-yellow-800 font-medium text-sm">Read more journal entries &rarr;</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-purple-700 mb-3">Русский (TRKI-1 Goal)</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        <strong>Current Focus:</strong> Mastering Cyrillic script and basic conversational phrases.
+                        <br><strong>Recent Progress:</strong> Can introduce myself and ask simple questions.
+                        <br><strong>Next Steps:</strong> Learn common verbs and their conjugations.
+                    </p>
+                    <a href="#" class="text-yellow-600 hover:text-yellow-800 font-medium text-sm">Read more journal entries &rarr;</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-purple-700 mb-3">Exploratory Languages</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        A glimpse into my dabbling in French, Arabic, Hebrew, Sanskrit-Pali, Thai, Indonesian, Spanish, Japanese, and Hindi. Each a unique journey of discovery.
+                    </p>
+                    <a href="#" class="text-yellow-600 hover:text-yellow-800 font-medium text-sm">Explore these journeys &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional & Business Acumen Section - Light Yellow -->
+        <section id="professional" class="mb-12 bg-yellow-100 p-6 rounded-xl shadow-lg">
+            <h2 class="text-3xl font-semibold text-yellow-800 mb-6 border-b-2 border-yellow-300 pb-2">
+                <span class="mr-2">💼</span> Professional & Business Acumen
+            </h2>
+            <p class="text-lg text-gray-700 mb-8">This section details my efforts to cultivate essential career skills and delve into the intricacies of business and leadership.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-yellow-700 mb-3">Investment Management</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        <strong>Current Focus:</strong> Advanced portfolio optimization strategies.
+                        <br><strong>Recent Progress:</strong> Developed a simulated trading algorithm.
+                        <br><strong>Next Steps:</strong> Researching alternative investment vehicles.
+                    </p>
+                    <a href="#" class="text-purple-600 hover:text-purple-800 font-medium text-sm">Read more journal entries &rarr;</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-yellow-700 mb-3">Data Analysis & Coding</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        <strong>Current Focus:</strong> Machine learning for predictive analytics.
+                        <br><strong>Recent Progress:</strong> Built a data visualization dashboard using Python.
+                        <br><strong>Next Steps:</strong> Explore big data technologies like Spark.
+                    </p>
+                    <a href="#" class="text-purple-600 hover:text-purple-800 font-medium text-sm">Read more journal entries &rarr;</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-yellow-700 mb-3">Leadership & Strategy</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Encompassing teamwork, HR development, networking, and the art of office politics and backchanneling.
+                        <br><strong>Recent Progress:</strong> Led a successful cross-functional project.
+                        <br><strong>Next Steps:</strong> Mentoring junior colleagues.
+                    </p>
+                    <a href="#" class="text-purple-600 hover:text-purple-800 font-medium text-sm">Read more journal entries &rarr;</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-yellow-700 mb-3">Entrepreneurial Ventures</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        From running a restaurant to building a production house, and the ambition of building a Unicorn.
+                        <br><strong>Recent Progress:</strong> Developed a detailed business plan for a startup.
+                        <br><strong>Next Steps:</strong> Exploring funding opportunities.
+                    </p>
+                    <a href="#" class="text-purple-600 hover:text-purple-800 font-medium text-sm">Read more journal entries &rarr;</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-yellow-700 mb-3">Diplomacy & Brokerage</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Insights into the worlds of diplomacy, political brokerage, and investment dealing.
+                        <br><strong>Recent Progress:</strong> Attended a workshop on international negotiation.
+                        <br><strong>Next Steps:</strong> Studying case studies of successful diplomatic resolutions.
+                    </p>
+                    <a href="#" class="text-purple-600 hover:text-purple-800 font-medium text-sm">Read more journal entries &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Digital Literacy & Innovation Section - Light Purple -->
+        <section id="digital" class="mb-12 bg-purple-100 p-6 rounded-xl shadow-lg">
+            <h2 class="text-3xl font-semibold text-purple-800 mb-6 border-b-2 border-purple-300 pb-2">
+                <span class="mr-2">💻</span> Digital Literacy & Innovation
+            </h2>
+            <p class="text-lg text-gray-700 mb-8">Exploring the integration of digital tools and concepts into daily life and project development.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-purple-700 mb-3">Cybersecurity</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        <strong>Current Focus:</strong> Understanding advanced persistent threats (APTs).
+                        <br><strong>Recent Progress:</strong> Implemented multi-factor authentication across all personal accounts.
+                        <br><strong>Next Steps:</strong> Learning about ethical hacking and penetration testing.
+                    </p>
+                    <a href="#" class="text-yellow-600 hover:text-yellow-800 font-medium text-sm">Read more journal entries &rarr;</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-purple-700 mb-3">Projects Developer</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        <strong>Current Focus:</strong> Agile methodologies and full-stack development.
+                        <br><strong>Recent Progress:</strong> Launched a small personal web application.
+                        <br><strong>Next Steps:</strong> Contributing to open-source projects.
+                    </p>
+                    <a href="#" class="text-yellow-600 hover:text-yellow-800 font-medium text-sm">Read more journal entries &rarr;</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-purple-700 mb-3">Data Management</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        <strong>Current Focus:</strong> Database design and optimization.
+                        <br><strong>Recent Progress:</strong> Cleaned and organized a large personal dataset.
+                        <br><strong>Next Steps:</strong> Exploring cloud-based data warehousing solutions.
+                    </p>
+                    <a href="#" class="text-yellow-600 hover:text-yellow-800 font-medium text-sm">Read more journal entries &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Mastery & Lifestyle Section - Light Yellow -->
+        <section id="personal" class="mb-12 bg-yellow-100 p-6 rounded-xl shadow-lg">
+            <h2 class="text-3xl font-semibold text-yellow-800 mb-6 border-b-2 border-yellow-300 pb-2">
+                <span class="mr-2">✨</span> Personal Mastery & Lifestyle
+            </h2>
+            <p class="text-lg text-gray-700 mb-8">A diverse collection of personal interests, hobbies, and pursuits aimed at holistic self-improvement and enriching life experiences.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-yellow-700 mb-3">Arts & Aesthetics</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        My journey in living space design, drawing, tailoring, fashion, and the world of music – from mindful listening to playing guitar, piano, drums, and singing.
+                    </p>
+                    <a href="#" class="text-purple-600 hover:text-purple-800 font-medium text-sm">Explore creative pursuits &rarr;</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-yellow-700 mb-3">Physical & Mental Discipline</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Dedicated to bodybuilding, triathlon/marathon training, martial arts (Karate, Judo/Ju-jitsu), basketball, and the strategic depths of chess (ELO 2000 goal).
+                    </p>
+                    <a href="#" class="text-purple-600 hover:text-purple-800 font-medium text-sm">View discipline logs &rarr;</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-yellow-700 mb-3">Curatorial & Appreciation</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Insights into butlering, travel for cultural appreciation, modern social thought (SOCY 151), dining and food appreciation, and collecting (coins, banknotes, books).
+                    </p>
+                    <a href="#" class="text-purple-600 hover:text-purple-800 font-medium text-sm">Discover my curated interests &rarr;</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-yellow-700 mb-3">Other Hobbies</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        A look into my enjoyment of cooking, woodworking, general sporting activities, and even the quiet pursuit of being a hobbyist librarian.
+                    </p>
+                    <a href="#" class="text-purple-600 hover:text-purple-800 font-medium text-sm">See more hobbies &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section - Dark Purple -->
+    <footer class="bg-purple-900 text-white py-6 px-4 sm:px-6 lg:px-8 text-center rounded-t-xl">
+        <div class="container mx-auto">
+            <p>&copy; buihuunam@zukon.page</p>
+            <p class="text-sm mt-2">You know where to find me.</p>
+        </div>
+    </footer>
+
+</body>
 </html>
